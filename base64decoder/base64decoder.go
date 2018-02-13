@@ -13,8 +13,7 @@ func main() {
 	} else {
 		data, err := base64.StdEncoding.DecodeString(os.Args[1])
 		if err != nil {
-			fmt.Println("An error was encountered decoding supplied string.")
-			os.Exit(1)
+			panic("An error was encountered decoding supplied string.")
 		}
 		fmt.Printf("%q", data)
 	}
